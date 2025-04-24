@@ -20,4 +20,14 @@ function fibsRec(num) {
     return fibsRec(num - 1) + fibsRec(num - 2)
 }
 
-console.log(fibsRec(3))
+// Array format
+function fibonacciArray(length) {
+    const result = [];
+    for (let i = 0; i < length; i++) {
+        result.push(fibsRec(i));
+    }
+    return result;
+}
+
+
+console.log(fibonacciArray(8))
